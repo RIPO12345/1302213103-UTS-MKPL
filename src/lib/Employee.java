@@ -1,7 +1,6 @@
 package lib;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class Employee {
     private int monthWorkingInYear;
 
     private boolean isForeigner;
-    private boolean gender; // true = Laki-laki, false = Perempuan
+    private boolean gender;
 
     private int monthlySalary;
     private int otherMonthlyIncome;
@@ -43,8 +42,8 @@ public class Employee {
         this.isForeigner = isForeigner;
         this.gender = gender;
 
-        childNames = new LinkedList<String>();
-        childIdNumbers = new LinkedList<String>();
+        childNames = new LinkedList<>();
+        childIdNumbers = new LinkedList<>();
     }
 
     // Metode untuk mengatur gaji bulanan berdasarkan grade
@@ -103,5 +102,13 @@ public class Employee {
         } else {
             monthWorkingInYear = 12;
         }
+    }
+}
+
+class TaxFunction {
+
+    public static int calculateTax(int monthlySalary, int otherMonthlyIncome, int monthWorkingInYear, int annualDeductible, boolean hasSpouse, int numOfChildren) {
+        // implementasi perhitungan pajak
+        return 0;
     }
 }
